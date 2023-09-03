@@ -1,14 +1,18 @@
 const express  = require("express") // requiring express package
 const app = express() // storing it in app , app vanney variable throughout use garxum
 
+// ma ejs use garna aateko xu , k k chayiney ho env set gardey
+app.set("view engine","ejs")
+
 // '/' ma gayo vaney k dekauney hae ,request paxi response hunae paryo
 app.get('/',(req,res)=>{
-    res.send("<h1>bye </h1>")
+    // views vitra ko file render garyo 
+    res.render("home")
     
 })
 
 app.get("/about",(req,res)=>{
-    res.send("About Page hello world")
+    res.render("about")
 })
 
 app.get("/contact",(req,res)=>{

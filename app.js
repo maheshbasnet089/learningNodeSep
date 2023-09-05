@@ -6,13 +6,14 @@ app.set("view engine","ejs")
 
 // '/' ma gayo vaney k dekauney hae ,request paxi response hunae paryo
 app.get('/',(req,res)=>{
+    const name = "Manish"
     // views vitra ko file render garyo 
-    res.render("home")
+    res.render("home",{name:name})
     
 })
 
 app.get("/about",(req,res)=>{
-    res.render("about")
+    res.render("about",{firstName:"Manish"})
 })
 
 app.get("/contact",(req,res)=>{
